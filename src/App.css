@@ -1,0 +1,10 @@
+body {
+}
+header {
+  height: 60px;
+  border-bottom: solid 1px lightgray;
+}
+header img {
+  height: 40px;
+  width: 150px;
+}

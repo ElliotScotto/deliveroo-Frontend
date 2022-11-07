@@ -22,7 +22,12 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <span>En cours de chargement...</span>
+    <>
+      {/* <span>En cours de chargement...</span> */}
+      <header>
+        <img src={"./images/deliveroo_logo2.png"} alt="logo" />
+      </header>
+    </>
   ) : (
     <div>
       <span>{data.title}</span>
