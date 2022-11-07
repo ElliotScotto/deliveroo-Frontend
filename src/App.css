@@ -34,9 +34,12 @@ h1 {
 .menu-items {
   margin: 20px;
   display: flex;
-  border: solid 1px black;
+  border: solid 1px blue;
 }
 .title-category h2 {
   font-size: 22px;
   margin-bottom: 5px;
+}
+.category {
+  border: solid 1px green;
 }

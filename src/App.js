@@ -52,18 +52,9 @@ function App() {
           </div>
         </div>
         {/*  */}
-        <Meal data={data} />
+        <Meal categories={data.categories} />
         {/*  */}
       </main>
-      {/* <div>
-        <span>{data.title}</span>
-        <br />
-        <ul>
-          {data.movies.map((movie, index) => {
-            return <li key={index}>{movie.title}</li>;
-          })}
-        </ul>
-      </div> */}
     </>
   );
 }
