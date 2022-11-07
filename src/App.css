@@ -3,8 +3,40 @@ body {
 header {
   height: 60px;
   border-bottom: solid 1px lightgray;
+  display: flex;
+  align-items: center;
 }
-header img {
+
+.logostyle img {
   height: 40px;
   width: 150px;
+  border: solid 1px black;
+  margin-left: 20px;
+}
+.restaurant-infos {
+  margin: 20px;
+  border: solid black 1px;
+  display: flex;
+}
+h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+.restaurant-infos p {
+  line-height: 20px;
+}
+.restaurant-text {
+  flex: 2;
+}
+.restaurant-image {
+  flex: 1;
+}
+.menu-items {
+  margin: 20px;
+  display: flex;
+  border: solid 1px black;
+}
+.title-category h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
 }

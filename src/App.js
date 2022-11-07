@@ -3,15 +3,20 @@ import "./App.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import logo from "./assets/images/logo-teal.svg";
+//import des components
+import Meal from "./components/Meal";
 
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [meals, setMeals] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3200/");
+        const response = await axios.get(
+          "https://site--backend-deliveroo--t8zv844knhm7.code.run/"
+        );
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);
@@ -27,10 +32,29 @@ function App() {
   ) : (
     <>
       <header>
-        <img src={logo} alt="logo" />
+        <div className="logostyle">
+          <img src={logo} alt="logo" />
+        </div>
       </header>
-      <h2>{data.restaurant.name}</h2>
-
+      <main>
+        <div className="restaurant-infos">
+          <div className="restaurant-text">
+            <h1>{data.restaurant.name}</h1>
+            <p>{data.restaurant.description}</p>
+          </div>
+          <div className="restaurant-image">
+            <img
+              src={data.restaurant.picture}
+              alt="header-image"
+              height="147px"
+              width="262px"
+            />
+          </div>
+        </div>
+        {/*  */}
+        <Meal data={data} />
+        {/*  */}
+      </main>
       {/* <div>
         <span>{data.title}</span>
         <br />
