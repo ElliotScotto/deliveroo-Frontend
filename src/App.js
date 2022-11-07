@@ -2,6 +2,7 @@ import "./App.css";
 // import du package axios
 import axios from "axios";
 import { useState, useEffect } from "react";
+import logo from "./assets/images/logo-teal.svg";
 
 function App() {
   const [data, setData] = useState();
@@ -10,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3100/");
+        const response = await axios.get("http://localhost:3200/");
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);
@@ -22,22 +23,24 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <>
-      {/* <span>En cours de chargement...</span> */}
-      <header>
-        <img src={"./images/deliveroo_logo2.png"} alt="logo" />
-      </header>
-    </>
+    <span>En cours de chargement...</span>
   ) : (
-    <div>
-      <span>{data.title}</span>
-      <br />
-      <ul>
-        {data.movies.map((movie, index) => {
-          return <li key={index}>{movie.title}</li>;
-        })}
-      </ul>
-    </div>
+    <>
+      <header>
+        <img src={logo} alt="logo" />
+      </header>
+      <h2>{data.restaurant.name}</h2>
+
+      {/* <div>
+        <span>{data.title}</span>
+        <br />
+        <ul>
+          {data.movies.map((movie, index) => {
+            return <li key={index}>{movie.title}</li>;
+          })}
+        </ul>
+      </div> */}
+    </>
   );
 }
 
