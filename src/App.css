@@ -1,29 +1,86 @@
+/* Fonts */
+@font-face {
+  font-family: "Stratos Deliveroo Web";
+  src: url("./assets/fonts/StratosDeliverooWeb-SemiBold.eot");
+  src: url("./assets/fonts/StratosDeliverooWeb-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/StratosDeliverooWeb-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/StratosDeliverooWeb-SemiBold.woff") format("woff"),
+    url("./assets/fonts/StratosDeliverooWeb-SemiBold.ttf") format("truetype"),
+    url("./assets/fonts/StratosDeliverooWeb-SemiBold.svg#StratosDeliverooWeb-SemiBold")
+      format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./assets/fonts/IBMPlexSans-Bold.eot");
+  src: url("./assets/fonts/IBMPlexSans-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/IBMPlexSans-Bold.woff2") format("woff2"),
+    url("./assets/fonts/IBMPlexSans-Bold.woff") format("woff"),
+    url("./assets/fonts/IBMPlexSans-Bold.ttf") format("truetype"),
+    url("./assets/fonts/IBMPlexSans-Bold.svg#IBMPlexSans-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("./assets/fonts/IBMPlexSans.eot");
+  src: url("./assets/fonts/IBMPlexSans.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/IBMPlexSans.woff2") format("woff2"),
+    url("./assets/fonts/IBMPlexSans.woff") format("woff"),
+    url("./assets/fonts/IBMPlexSans.ttf") format("truetype"),
+    url("./assets/fonts/IBMPlexSans.svg#IBMPlexSans") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* General */
 body {
+  font-family: "IBM Plex Sans";
+}
+main {
+  width: 1200px;
+  margin: auto;
 }
 header {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.logostyle {
   height: 60px;
   border-bottom: solid 1px lightgray;
   display: flex;
   align-items: center;
 }
-
 .logostyle img {
   height: 40px;
   width: 150px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   margin-left: 20px;
+  align-items: center;
 }
 .restaurant-infos {
   margin: 20px;
-  border: solid black 1px;
+  border: solid 1px black;
   display: flex;
 }
 h1 {
-  font-size: 38px;
+  font-size: 32px;
+  font-family: "Stratos Deliveroo Web";
   margin-bottom: 10px;
 }
 .restaurant-infos p {
   line-height: 20px;
+  font-size: 18px;
+  color: gray;
 }
 .restaurant-text {
   flex: 2;
@@ -42,4 +99,78 @@ h1 {
 }
 .category {
   border: solid 1px green;
+}
+.cyan {
+  border: solid 2px cyan;
+  display: flex;
+  margin: 20px;
+  height: 210px;
+}
+.a {
+  margin: 2px;
+  border: solid 1px blue;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+.b {
+  border: solid 1px red;
+  margin: 2px;
+}
+.c {
+  border: solid 1px yellow;
+  display: flex;
+  gap: 1px;
+  flex-direction: row;
+  flex: 1;
+}
+.d {
+  border: solid 1px pink;
+  display: flex;
+  margin: 1px;
+  flex: 1;
+}
+.e {
+  border: solid 1px grey;
+  margin: 2px;
+  flex: 2;
+}
+.f {
+  border: solid 1px green;
+  margin: 2px;
+}
+.g {
+  border: solid 1px purple;
+  margin: 2px;
+}
+.h {
+  border: solid 1px black;
+  display: flex;
+  margin: 2px;
+}
+.i {
+  border: solid 1px lightblue;
+  flex: 1;
+  margin: 2px;
+}
+.j {
+  border: solid 1px lightcoral;
+  flex: 1;
+  margin: 2px;
+}
+.k {
+  border: solid 1px lightsalmon;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.shop {
+  border: solid 1px chartreuse;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
 }

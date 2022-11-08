@@ -2,14 +2,16 @@ import "./App.css";
 // import du package axios
 import axios from "axios";
 import { useState, useEffect } from "react";
-import logo from "./assets/images/logo-teal.svg";
+
 //import des components
+import Header from "./components/Header";
+import Restaurant from "./components/Restaurant";
+import Menus from "./components/Menus";
 import Meal from "./components/Meal";
 
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [meals, setMeals] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,29 +33,23 @@ function App() {
     <span>En cours de chargement...</span>
   ) : (
     <>
-      <header>
-        <div className="logostyle">
-          <img src={logo} alt="logo" />
-        </div>
-      </header>
+      <Header />
       <main>
-        <div className="restaurant-infos">
-          <div className="restaurant-text">
-            <h1>{data.restaurant.name}</h1>
-            <p>{data.restaurant.description}</p>
+        <Restaurant data={data} />
+        <div className="cyan">
+          <div className="a">
+            <div className="b">
+              <h2>TITRE CATEGORIE</h2>
+            </div>
+            <div className="c">
+              <Meal />
+              <Meal />
+            </div>
           </div>
-          <div className="restaurant-image">
-            <img
-              src={data.restaurant.picture}
-              alt="header-image"
-              height="147px"
-              width="262px"
-            />
-          </div>
+          <div className="shop">PANIER</div>
         </div>
-        {/*  */}
-        <Meal categories={data.categories} />
-        {/*  */}
+
+        <Menus categories={data.categories} />
       </main>
     </>
   );
