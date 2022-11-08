@@ -6,12 +6,15 @@ import { useState, useEffect } from "react";
 //import des components
 import Header from "./components/Header";
 import Restaurant from "./components/Restaurant";
-import Menus from "./components/Menus";
 import Meal from "./components/Meal";
+import Basket from "./components/Basket";
 
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [counter, setCounter] = useState(0);
+
+  const [shop, setShop] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,36 +41,19 @@ function App() {
         <Restaurant data={data} />
         <div className="bigcontent">
           <div className="content">
-            {data.categories.map((elem, index) => {
-              return (
-                <>
-                  <div className>
-                    <div className="a">
-                      <div className="b">
-                        <h2 key={index}>{elem.name}</h2>
-                      </div>
-                      {elem.meals.map((elem) => {
-                        return (
-                          <div className="c">
-                            <div className="e">
-                              <div className="f">{elem.title}</div>
-                              <div className="g">{elem.description}</div>
-                              <div className="h">
-                                <div className="i">{elem.price}</div>
-                                <div className="j">{elem.popular}</div>
-                              </div>
-                            </div>
-                            <div className="k">IMAGE</div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </>
-              );
-            })}
+            <Meal data={data} />
           </div>
-          <div className="content-bis">PANIER</div>
+          <div className="content-bis">
+            <Basket
+              data={data}
+              counter={counter}
+              setCounter={setCounter}
+              shop={shop}
+              setShop={setShop}
+              categories={data.categories}
+              meals={data.categories.meals}
+            />
+          </div>
         </div>
         <br />
         <br />
@@ -78,7 +64,6 @@ function App() {
         <br />
         <br />
         <br />
-        {/* <Menus categories={data.categories} /> */}
       </main>
     </>
   );
