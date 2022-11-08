@@ -146,7 +146,6 @@ h1 {
 
 .b {
   border: solid 1px red;
-  margin: 4px;
 }
 .c {
   border: solid 1px goldenrod;
@@ -214,9 +213,14 @@ h1 {
   padding: 10px;
   color: white;
   text-align: center;
+  border-radius: 5px;
+  margin: 2px;
 }
 .basket-style {
-  width: 100%;
+  width: 380px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .count-meal {
   margin: 10px;

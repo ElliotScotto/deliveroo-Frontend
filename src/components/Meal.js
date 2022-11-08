@@ -1,4 +1,4 @@
-const Meal = ({ data, index }) => {
+const Meal = ({ data }) => {
   return (
     <>
       {data.categories.map((elem) => {
@@ -6,7 +6,7 @@ const Meal = ({ data, index }) => {
           <>
             <div className="a">
               <div className="b">
-                <h2 key={index}>{elem.name}</h2>
+                <h2>{elem.name}</h2>
               </div>
               {elem.meals.map((elem, index) => {
                 return (

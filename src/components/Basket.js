@@ -1,18 +1,14 @@
 import Counter from "./Counter";
 
-const Basket = ({
-  data,
-  categories,
-  meals,
-  counter,
-  setCounter,
-  shop,
-  setShop,
-}) => {
+const Basket = ({ data, counter, setCounter }) => {
   return (
     <>
       <div className="basket-style">
-        <div onClick={() => setCounter(0)} className="valid-basket">
+        <div
+          type="submit"
+          onClick={() => setCounter(0)}
+          className="valid-basket"
+        >
           Validez mon panier
         </div>
         <Counter counter={counter} setCounter={setCounter} />
