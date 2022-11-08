@@ -67,19 +67,21 @@ header {
   margin-left: 20px;
   align-items: center;
 }
+
+/* Hero */
 .restaurant-infos {
   margin: 20px;
   border: solid 1px black;
   display: flex;
 }
 h1 {
-  font-size: 32px;
+  font-size: 38px;
   font-family: "Stratos Deliveroo Web";
   margin-bottom: 10px;
 }
 .restaurant-infos p {
-  line-height: 20px;
-  font-size: 18px;
+  line-height: 28px;
+  font-size: 20px;
   color: gray;
 }
 .restaurant-text {
@@ -88,10 +90,30 @@ h1 {
 .restaurant-image {
   flex: 1;
 }
+
+/* Content - Menu */
+.bigcontent {
+  margin: 10px;
+  display: flex;
+  gap: 5px;
+}
+.content {
+  border: solid 2px red;
+  width: calc(65%);
+}
+.content-bis {
+  border: solid 1px chocolate;
+  width: calc(35%);
+}
 .menu-items {
-  margin: 20px;
   display: flex;
   border: solid 1px blue;
+  flex: 2;
+}
+.menu-flex {
+  border: solid 2px green;
+  margin: 5px;
+  display: flex;
 }
 .title-category h2 {
   font-size: 22px;
@@ -105,62 +127,70 @@ h1 {
   display: flex;
   margin: 20px;
   height: 210px;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin: 4px;
 }
+
 .a {
-  margin: 2px;
+  margin: 4px;
   border: solid 1px blue;
   display: flex;
   flex-direction: column;
   flex: 2;
+  margin-bottom: 20px;
 }
+
 .b {
   border: solid 1px red;
-  margin: 2px;
+  margin: 4px;
 }
 .c {
-  border: solid 1px yellow;
+  border: solid 1px goldenrod;
   display: flex;
   gap: 1px;
-  flex-direction: row;
   flex: 1;
+  margin: 4px;
 }
 .d {
   border: solid 1px pink;
   display: flex;
-  margin: 1px;
+  margin: 4px;
   flex: 1;
 }
 .e {
   border: solid 1px grey;
-  margin: 2px;
+  margin: 4px;
   flex: 2;
+  height: 210px;
 }
 .f {
   border: solid 1px green;
-  margin: 2px;
+  margin: 4px;
 }
 .g {
   border: solid 1px purple;
-  margin: 2px;
+  margin: 4px;
 }
 .h {
   border: solid 1px black;
   display: flex;
-  margin: 2px;
+  margin: 4px;
 }
 .i {
   border: solid 1px lightblue;
   flex: 1;
-  margin: 2px;
+  margin: 4px;
 }
 .j {
   border: solid 1px lightcoral;
   flex: 1;
-  margin: 2px;
+  margin: 4px;
 }
 .k {
   border: solid 1px lightsalmon;
-  margin: 2px;
+  margin: 4px;
   display: flex;
   justify-content: center;
   align-items: center;

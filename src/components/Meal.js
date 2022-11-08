@@ -1,3 +1,5 @@
+import Menus from "./Menus";
+
 const Meal = () => {
   return (
     <div className="c">
